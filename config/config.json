@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "bizagi-bpmn-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/bizagiBpmn/BizagiBpmnWebPart.js",
+          "manifest": "./src/webparts/bizagiBpmn/BizagiBpmnWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "BizagiBpmnWebPartStrings": "lib/webparts/bizagiBpmn/loc/{locale}.js"
+  }
+}
