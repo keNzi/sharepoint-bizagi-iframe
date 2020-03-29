@@ -12,6 +12,8 @@
   // Components that allow authors to embed arbitrary script code should set this to true.
   // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
   "requiresCustomScript": false,
+  // https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/basics/use-web-parts-full-width-column
+  "supportsFullBleed": true,
   "supportedHosts": ["SharePointWebPart"],
 
   "preconfiguredEntries": [{
