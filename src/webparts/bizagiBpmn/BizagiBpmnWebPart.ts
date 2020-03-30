@@ -1,7 +1,7 @@
 import { Version } from '@microsoft/sp-core-library';
 import {
   IPropertyPaneConfiguration,
-  PropertyPaneTextField
+  PropertyPaneTextField,
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import { escape } from '@microsoft/sp-lodash-subset';
@@ -10,27 +10,17 @@ import styles from './BizagiBpmnWebPart.module.scss';
 import * as strings from 'BizagiBpmnWebPartStrings';
 
 export interface IBizagiBpmnWebPartProps {
-  description: string;
+  link: string;
+  width: number;
+  height: number;
 }
 
 export default class BizagiBpmnWebPart extends BaseClientSideWebPart <IBizagiBpmnWebPartProps> {
 
   public render(): void {
     this.domElement.innerHTML = `
-      <div class="${ styles.bizagiBpmn }">
-    <div class="${ styles.container }">
-      <div class="${ styles.row }">
-        <div class="${ styles.column }">
-          <span class="${ styles.title }">Welcome to SharePoint!</span>
-  <p class="${ styles.subTitle }">Customize SharePoint experiences using Web Parts.</p>
-    <p class="${ styles.description }">${escape(this.properties.description)}</p>
-      <a href="https://aka.ms/spfx" class="${ styles.button }">
-        <span class="${ styles.label }">Learn more</span>
-          </a>
-          </div>
-          </div>
-          </div>
-          </div>`;
+        <iframe src="${ this.properties.link }" width="${ this.properties.width }" height="${ this.properties.height }" allowfullscreen></iframe>
+    `;
   }
 
   protected get dataVersion(): Version {
@@ -48,8 +38,14 @@ export default class BizagiBpmnWebPart extends BaseClientSideWebPart <IBizagiBpm
           {
             groupName: strings.BasicGroupName,
             groupFields: [
-              PropertyPaneTextField('description', {
-                label: strings.DescriptionFieldLabel
+              PropertyPaneTextField('link', {
+                label: 'Add URL to BPMN file'
+              }),
+              PropertyPaneTextField('width', {
+                label: 'Width  of <iframe>'
+              }),
+              PropertyPaneTextField('height', {
+                label: 'Height of <iframe>'
               })
             ]
           }
