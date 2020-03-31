@@ -32,7 +32,7 @@ export default class BizagiBpmnWebPart extends BaseClientSideWebPart <IBizagiBpm
     pages: [
       {
         header: {
-          description: strings.PropertyPaneDescription
+          description: 'WebPart to allow users to set Bizagi BPMN processes inside <iframe>.'
         },
         groups: [
           {

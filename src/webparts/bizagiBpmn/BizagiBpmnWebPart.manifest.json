@@ -23,7 +23,9 @@
     "description": { "default": "BizagiBPMN inside <iframe> (c) Piotr 'keNzi' Czajkowski" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "BizagiBPMN"
+      "description": "BizagiBPMN",
+      "width": "100%",
+      "height": 300
     }
   }]
 }
