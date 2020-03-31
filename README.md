@@ -1,6 +1,10 @@
 ## bizagi-bpmn
 
-This is where you include your WebPart documentation.
+This WebPart allow users to put Bizagi BPMN processes inside <iframe> section in Sharepoint Online.
+
+WebPart allow to put these processes in full-width section!
+
+Check it out and let me know what you think! :)
 
 ### Building the code
 
